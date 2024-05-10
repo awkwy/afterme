@@ -4,6 +4,7 @@
 	
 	const id = () => "_" + Math.random().toString(36).substr(2, 9);
 
+const COL_sub = 2;
 const COL = 6;
 
 let items = [
@@ -17,19 +18,23 @@ let items = [
     }),
     id: id(),
   },
+
+];
+
+let items_sub = [
   {
-    [COL]: gridHelp.item({
+    [COL_sub]: gridHelp.item_sub({
       x: 0,
       y: 0,
       w: 4,
-      h: 6,
+      h: 4,
       draggable: false,
     }),
     id: id(),
   },
   {
-    [COL]: gridHelp.item({
-      x: 4,
+    [COL_sub]: gridHelp.item_sub({
+      x: 0,
       y: 0,
       w: 2,
       h: 2,
@@ -38,8 +43,8 @@ let items = [
     id: id(),
   },
   {
-    [COL]: gridHelp.item({
-      x: 4,
+    [COL_sub]: gridHelp.item_sub({
+      x: 0,
       y: 2,
       w: 2,
       h: 2,
@@ -48,8 +53,8 @@ let items = [
     id: id(),
   },
   {
-    [COL]: gridHelp.item({
-      x: 4,
+    [COL_sub]: gridHelp.item_sub({
+      x: 0,
       y: 4,
       w: 2,
       h: 2,
@@ -59,6 +64,7 @@ let items = [
   },
   
 ];
+const cols_sub = [[1600, 2]];
 const cols = [[1600, 6]];
 </script>
 
@@ -72,12 +78,12 @@ const cols = [[1600, 6]];
 		<div class=container>
 			<Grid bind:items={items} rowHeight={100} let:item {cols}>
 			  <div class=main_box>
-				Box
+				Main Box
 			  </div>
 			</Grid>
-			<Grid bind:items={items} rowHeight={100} let:item {cols}>
+			<Grid bind:items={items_sub} rowHeight={100} let:item_sub {cols_sub}>
 				<div class=main_box>
-				  Box
+				  sub Box 
 				</div>
 			  </Grid>
 		</div>

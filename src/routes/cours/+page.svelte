@@ -29,6 +29,4 @@
 			  </Card>
 		</div>
 	  </Flex>
-	
-	
 </main>

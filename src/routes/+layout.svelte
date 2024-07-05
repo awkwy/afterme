@@ -20,7 +20,7 @@
 	  <NavLi href="/">Acceuil</NavLi>
 	  <NavLi href="/cours">Cours</NavLi>
 	  <NavLi href="/exercices">Exercices</NavLi>
-	  <NavLi href="/examen">Examen</NavLi>
+	  <NavLi href="/pendu">Pendu</NavLi>
 	  <NavLi><DarkMode/></NavLi>
 	</NavUl>
   </Navbar>
